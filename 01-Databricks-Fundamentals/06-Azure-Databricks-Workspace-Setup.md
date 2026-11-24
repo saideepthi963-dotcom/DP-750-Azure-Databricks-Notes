@@ -212,3 +212,138 @@ The web application belongs to the **Control Plane**, while workload execution h
 - Launch Workspace opens the Databricks Control Plane interface.
 
 **Remember: Main Resource Group = Project Resources | Managed Resource Group = Databricks-managed Infrastructure.**
+
+## 9. Azure Databricks Workspace Overview
+
+The Azure Databricks workspace provides a unified interface for developing, managing, executing, and monitoring data workloads.
+
+### Workspace Navigation
+
+```mermaid
+flowchart TD
+    A["Azure Databricks Workspace"] --> B["Workspace"]
+    A --> C["Catalog"]
+    A --> D["Jobs and Pipelines"]
+    A --> E["Compute"]
+    A --> F["Data Engineering"]
+    A --> G["SQL"]
+    A --> H["AI and ML"]
+
+    B --> I["Notebooks, Folders, Scripts"]
+    C --> J["Tables, Schemas, Volumes"]
+    D --> K["Orchestration and Monitoring"]
+    E --> L["Processing Resources"]
+    F --> M["Ingestion and Runs"]
+    G --> N["Analytics and Reporting"]
+    H --> O["AI and Machine Learning"]
+
+    style A fill:#FF3621,color:#fff
+```
+
+### Main Workspace Components
+
+| Component | Purpose |
+|---|---|
+| Workspace | Develop and organize notebooks, folders, scripts, and Git folders |
+| Recents | Access recently opened objects |
+| Catalog | Manage data assets through Unity Catalog |
+| Jobs and Pipelines | Create, schedule, and monitor workflows |
+| Compute | Configure and manage processing resources |
+| Marketplace | Discover datasets, connectors, and partner offerings |
+| SQL | Perform SQL analytics and reporting |
+| Data Engineering | Manage data ingestion and monitor runs |
+| AI and ML | Develop AI and machine learning workloads |
+
+## 10. Personal Workspace Directory
+
+Each user has a personal working directory within the Databricks workspace.
+
+```text
+Workspace/
+├── Users/
+│   ├── user1@example.com/
+│   │   ├── Notebooks/
+│   │   ├── Scripts/
+│   │   └── Git Folders/
+│   │
+│   └── user2@example.com/
+│
+└── Shared/
+```
+
+The personal directory is used to develop and organize code and workspace objects.
+
+## 11. Unity Catalog
+
+Unity Catalog is the centralized data governance solution in Databricks.
+
+The Catalog interface allows users to discover and manage:
+
+- Catalogs and schemas
+- Tables
+- Functions
+- Volumes
+
+Unity Catalog will be covered in detail in a dedicated course section.
+
+## 12. Compute Resources
+
+The Compute section provides access to different processing resources and related services.
+
+| Compute or Service | Purpose |
+|---|---|
+| All-purpose compute | Interactive development and data processing |
+| Job compute | Automated workload execution |
+| SQL warehouses | SQL queries and analytical workloads |
+| Pools | Reduce cluster startup time using ready-to-use instances |
+| Compute policies | Control permitted compute configurations |
+| AI Search | Search capabilities for AI applications |
+| Apps | Build and deploy applications |
+| Lakebase | Supports operational database and OLTP workloads |
+
+## 13. Data Engineering Section
+
+The Data Engineering section provides access to:
+
+- **Data Ingestion:** Connect to external data sources and ingest data.
+- **Runs:** Monitor workload and pipeline executions.
+
+Databricks provides multiple connectors to simplify data ingestion.
+
+## 14. Workspace Settings and Preview Features
+
+### Change Workspace Theme
+
+Profile Icon → Settings → Preferences → Light or Dark Mode
+
+### Change Code Editor Theme
+
+Profile Icon → Settings → Developer → Code Editor
+
+### Preview Features
+
+Databricks introduces new features through different release stages.
+
+| Release Stage | Meaning |
+|---|---|
+| Beta / Preview | Features that may require opt-in and have limited availability |
+| Generally Available (GA) | Features officially released for supported production use |
+
+If a feature demonstrated in the course is unavailable:
+
+1. Check the workspace's Previews section.
+2. Check whether the feature requires manual activation.
+3. Verify regional availability and permissions.
+4. Enable the feature if supported and refresh the workspace if necessary.
+
+## DP-750 Key Takeaways — Workspace Navigation
+
+- Workspace is the development environment.
+- Unity Catalog manages and governs data assets.
+- Compute provides processing resources.
+- Jobs and Pipelines manage workflow execution.
+- Data Ingestion connects external data sources.
+- Runs helps monitor executions.
+- Preview features may require activation.
+
+**Remember: Workspace = Develop | Catalog = Govern | Compute = Process | Jobs and Pipelines = Orchestrate.**
